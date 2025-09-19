@@ -20,7 +20,7 @@ var wanda = {
 var doctorStrange = {
     full_name: "Doctor Stephen Vincent Strange",
     character_type: CharacterType.WIZARD,
-    birthdate: new Date("1976-16-11"),
+    birthdate: new Date("1976-11-16"),
     print: function () {
         console.log("I love you in every universe. -", this.full_name, "to Christine");
     },
