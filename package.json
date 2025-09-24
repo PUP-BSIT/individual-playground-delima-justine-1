@@ -4,7 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"No tester yet!",
+    "test": "echo \"No tester yet!\"",
     "start": "lite-server",
     "build": "webpack"
   },
