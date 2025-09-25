@@ -15,7 +15,7 @@ type Character = {
 }
 
 const wanda: Character = {
-  full_name: "Wanda Maximoff,
+  full_name: "Wanda Maximoff",
   character_type: CharacterType.WITCH,
   age: 36,
   birthdate: new Date("1989-02-10"),
