@@ -4,7 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"No tester yet!\"",
+    "test": "jest",
     "start": "lite-server",
     "build": "webpack"
   },
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/PUP-BSIT/individual-playground-delima-justine-1#readme",
   "devDependencies": {
+    "jest": "^30.1.3",
     "lite-server": "^2.6.1",
     "ts-loader": "^9.5.4",
     "typescript": "^5.9.2",
