@@ -17,5 +17,5 @@ jobs:
           node-version: 20
       - run: npm ci
         working-directory: my_first_app
-      - run: npx ng test --watch=false --browsers=ChromeHeadless
+      - run: npx ng test --watch=false --browsers=CHROME_BIN
         working-directory: my_first_app
