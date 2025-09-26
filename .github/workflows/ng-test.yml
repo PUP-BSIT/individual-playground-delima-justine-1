@@ -17,5 +17,6 @@ jobs:
           node-version: 20
       - run: npm ci
         working-directory: my_first_app
-      - run: npx ng test --watch=false --browsers=CHROME_BIN
+      - run: apt-get update && apt-get install -y libnss3 libxss1 libasound2
+      - run: npx ng test --watch=false --browsers=ChromeHeadless
         working-directory: my_first_app
