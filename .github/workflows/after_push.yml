@@ -1,15 +1,16 @@
-name: Push Workflow
+# Name of the Workflow.
+name: Push Workflow 
 
 on: 
-  push:
-    branches:
-      - main
+  push: # Trigger Event
+    branches: 
+      - main # The branch that will trigger the workflow.
 
 jobs: 
-  push-workflow:
-    name: First Job
-    runs-on: ubuntu-latest
+  push-workflow: # Personal Job Identifier
+    name: First Job # Displayed in the Github Actions UI.
+    runs-on: ubuntu-latest # VM where commands will be executed.
 
-    steps: 
+    steps: # Processes/Steps that the job will execute.
       - name: Print Greeting
-        run: echo "Hello Github Actions!"
+        run: echo "Hello Github Actions!" # Print "Hello Github Actions!".
