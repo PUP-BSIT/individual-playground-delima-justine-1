@@ -2,9 +2,9 @@
 name: Push Workflow 
 
 on: 
-  push: # Trigger Event
-    branches: 
-      - main # The branch that will trigger the workflow.
+  workflow_dispatch: # Trigger Event
+    # branches: 
+    #   - main # The branch that will trigger the workflow.
 
 jobs: 
   push-workflow: # Personal Job Identifier
