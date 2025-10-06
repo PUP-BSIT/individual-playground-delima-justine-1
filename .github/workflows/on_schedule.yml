@@ -1,0 +1,13 @@
+name: On Schedule Workflow
+
+on:
+  schedule:
+    - cron:  '55 17 * * *' # Command Run On Notice
+
+jobs:
+  on-schedule-workflow:
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: "Print Scheduled Greeting"
+        run: echo "Hello it's been past minutes!"
