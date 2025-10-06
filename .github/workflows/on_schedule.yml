@@ -2,7 +2,7 @@ name: On Schedule Workflow
 
 on:
   schedule:
-    - cron:  '55 17 * * *' # Command Run On Notice
+    - cron:  '59 9 * * *' # Command Run On Notice
 
 jobs:
   on-schedule-workflow:
