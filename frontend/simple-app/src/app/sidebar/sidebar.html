@@ -3,19 +3,30 @@
     <h1>NoteIt</h1>
   </div>
   
-  <div>
+  <!-- <div>
     <button>New Note</button>
-  </div>
+  </div> -->
 
   <div>
-    <form [formGroup]="noteForm">
-      <label>Title</label>
-      <input formControlName="title" type="text" placeholder="title" />
+    <form [formGroup]="noteForm" class="form-container">
+      <label for="title">Title</label>
+      <input 
+        id="title"
+        formControlName="title" 
+        type="text" 
+        placeholder="title" />
 
-      <input formControlName="body" type="text" placeholder="note" />
+      <label for="content">Content</label>
+      <textarea 
+        id="content"
+        class="content-input"
+        placeholder="What's on your mind?"
+        formControlName="content"></textarea>
 
-      <label>Birthdate</label>
-      <input formControlName="date" type="date" />
+      <h6 class="timestamp-container">11:59 PM</h6>
+      <input formControlName="timestamp" type="hidden" />
+
+      <button>Add Note</button>
     </form>
   </div>
 </nav>

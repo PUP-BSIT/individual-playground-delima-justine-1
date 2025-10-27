@@ -14,8 +14,8 @@ export class Sidebar {
   constructor() {
     this.noteForm = this.formBuilder.group({
       title: [''],
-      body: [''],
-      date: ['']
+      content: [''],
+      timestamp: ['']
     });
   }
 }
