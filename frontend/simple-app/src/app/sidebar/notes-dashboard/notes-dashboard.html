@@ -1,0 +1,19 @@
+<main class="main-container">
+  <div>
+    <h1>Notes</h1>
+  </div>
+  
+  <div class="notes-container">
+    <ul>
+      @for(note of notes(); track $index) {
+        <li class="card">
+          <div class="">
+            {{ note.title }}  
+            {{ note.content }}
+            {{ note.timestamp }}
+          </div>
+        </li>
+      }
+    </ul>
+  </div>
+</main>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { Note } from '../../../models/note.model';
 
 @Component({
   selector: 'app-notes-dashboard',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './notes-dashboard.scss'
 })
 export class NotesDashboard {
-
+  notes = input(<Note[]>[]);
 }

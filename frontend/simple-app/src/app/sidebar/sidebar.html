@@ -1,36 +1,34 @@
-<nav class="sidebar-container">
-  <div class="title-container">
-    <h1>NoteIt</h1>
+<main class="main-wrapper">
+  <nav class="sidebar-container">
+    <div class="title-container">
+      <h1>NoteIt</h1>
+    </div>
+    
+    <div>
+      <form [formGroup]="noteForm" class="form-container">
+        <label for="title">Title</label>
+        <input 
+          id="title"
+          formControlName="title" 
+          type="text" 
+          placeholder="title" />
+
+        <label for="content">Content</label>
+        <textarea 
+          id="content"
+          class="content-input"
+          placeholder="What's on your mind?"
+          formControlName="content"></textarea>
+
+        <h6 class="timestamp-container">11:59 PM</h6>
+        <input formControlName="timestamp" type="hidden" />
+
+        <button (click)="addNote()">Add Note</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="notes-container">
+    <app-notes-dashboard [notes]="notes()"></app-notes-dashboard>
   </div>
-  
-  <!-- <div>
-    <button>New Note</button>
-  </div> -->
-
-  <div>
-    <form [formGroup]="noteForm" class="form-container">
-      <label for="title">Title</label>
-      <input 
-        id="title"
-        formControlName="title" 
-        type="text" 
-        placeholder="title" />
-
-      <label for="content">Content</label>
-      <textarea 
-        id="content"
-        class="content-input"
-        placeholder="What's on your mind?"
-        formControlName="content"></textarea>
-
-      <h6 class="timestamp-container">11:59 PM</h6>
-      <input formControlName="timestamp" type="hidden" />
-
-      <button>Add Note</button>
-    </form>
-  </div>
-</nav>
-
-<div class="notes-container">
-  
-</div>
+</main>

@@ -1,10 +1,11 @@
 import { Component, inject, signal } from '@angular/core';
 import { ReactiveFormsModule, FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { Note } from '../../models/note.model';
+import { NotesDashboard } from "./notes-dashboard/notes-dashboard";
 
 @Component({
   selector: 'app-sidebar',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, NotesDashboard],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.scss'
 })
@@ -17,7 +18,13 @@ export class Sidebar {
     this.noteForm = this.formBuilder.group({
       title: [''],
       content: [''],
-      timestamp: ['']
+      timestamp: ['11:59']
     });
+  }
+
+  addNote() {
+    this.notes.set([...this.notes(), this.noteForm.value])
+    console.log(this.noteForm.value);
+    console.log(this.notes());
   }
 }
