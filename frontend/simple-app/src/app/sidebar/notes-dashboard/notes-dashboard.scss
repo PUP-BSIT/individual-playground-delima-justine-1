@@ -1,6 +1,20 @@
+.notes-container {
+  margin-top: 50px;
+}
+
 .cards-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   gap: 2em;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: .5;
+}
+
+.card {
+  width: 18rem;
 }
