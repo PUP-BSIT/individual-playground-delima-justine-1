@@ -22,8 +22,8 @@
           placeholder="What's on your mind?"
           formControlName="content"></textarea>
 
-        <h6 class="timestamp-container">11:59 PM</h6>
-        <input formControlName="timestamp" type="hidden" />
+        <h6 class="timestamp-container">{{ currentTime }}</h6>
+        <input formControlName="timestamp" type="hidden" value="currentTime" />
 
         <button type="button" class="btn btn-success" (click)="addNote()">Add Note</button>
       </form>

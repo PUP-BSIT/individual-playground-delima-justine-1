@@ -13,12 +13,17 @@ export class Sidebar {
   noteForm: FormGroup;
   formBuilder = inject(FormBuilder);
   notes = signal(<Note[]>[]); 
-
+  
   constructor() {
+    const now = new Date();
+    const hours: number = now.getHours();
+    const minutes: number = now.getMinutes();
+    const currentTime = signal(`${hours}: ${minutes}`);
+
     this.noteForm = this.formBuilder.group({
       title: [''],
       content: [''],
-      timestamp: ['11:59']
+      timestamp: [`${currentTime()}`]
     });
   }
 
@@ -27,4 +32,8 @@ export class Sidebar {
     console.log(this.noteForm.value);
     console.log(this.notes());
   }
+
+  get currentTime() {
+    return this.noteForm.get('timestamp')?.value;
+  } 
 }
