@@ -31,9 +31,16 @@ export class Sidebar {
     this.notes.set([...this.notes(), this.noteForm.value])
     console.log(this.noteForm.value);
     console.log(this.notes());
+    this.clearInputs();
   }
 
   get currentTime() {
     return this.noteForm.get('timestamp')?.value;
   } 
+
+  clearInputs() {
+    this.noteForm.get('title')?.setValue('');
+    this.noteForm.get('content')?.setValue('');
+    this.noteForm.get('timestamp')?.setValue(`${this.currentTime()}`);
+  }
 }
