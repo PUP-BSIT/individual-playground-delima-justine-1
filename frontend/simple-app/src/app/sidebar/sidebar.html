@@ -1,0 +1,25 @@
+<nav class="sidebar-container">
+  <div class="title-container">
+    <h1>NoteIt</h1>
+  </div>
+  
+  <div>
+    <button>New Note</button>
+  </div>
+
+  <div>
+    <form [formGroup]="noteForm">
+      <label>Title</label>
+      <input formControlName="title" type="text" placeholder="title" />
+
+      <input formControlName="body" type="text" placeholder="note" />
+
+      <label>Birthdate</label>
+      <input formControlName="date" type="date" />
+    </form>
+  </div>
+</nav>
+
+<div class="notes-container">
+  
+</div>

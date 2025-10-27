@@ -1,0 +1,19 @@
+$sidebar-bg-color: #A3B18A;
+
+h1 {
+  margin: 0;
+}
+
+.sidebar-container {
+  background-color: $sidebar-bg-color;
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.title-container {
+  margin-top: 30px;
+}
