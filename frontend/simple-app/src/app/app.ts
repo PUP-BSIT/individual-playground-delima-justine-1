@@ -5,7 +5,7 @@ import { NotesDashboard } from "./sidebar/notes-dashboard/notes-dashboard";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Sidebar, NotesDashboard],
+  imports: [RouterOutlet, Sidebar],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
