@@ -1,7 +1,7 @@
 <main class="main-wrapper">
   <nav class="sidebar-container">
     <div class="title-container">
-      <h1>NoteIt</h1>
+      <h1>NoteIt!</h1>
     </div>
     
     <div>
@@ -9,6 +9,7 @@
         <label for="title">Title</label>
         <input 
           id="title"
+          class="form-control"
           formControlName="title" 
           type="text" 
           placeholder="title" />
@@ -16,14 +17,15 @@
         <label for="content">Content</label>
         <textarea 
           id="content"
-          class="content-input"
+          class="form-control"
+          rows="3"
           placeholder="What's on your mind?"
           formControlName="content"></textarea>
 
         <h6 class="timestamp-container">11:59 PM</h6>
         <input formControlName="timestamp" type="hidden" />
 
-        <button (click)="addNote()">Add Note</button>
+        <button type="button" class="btn btn-success" (click)="addNote()">Add Note</button>
       </form>
     </div>
   </nav>

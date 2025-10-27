@@ -4,13 +4,13 @@
   </div>
   
   <div class="notes-container">
-    <ul>
+    <ul class="cards-container">
       @for(note of notes(); track $index) {
         <li class="card">
-          <div class="">
-            {{ note.title }}  
-            {{ note.content }}
-            {{ note.timestamp }}
+          <div class="card-body">
+            <h5 class="card-title">{{ note.title }}</h5>
+            <p class="card-text"></p>{{ note.content }}
+            <p class="card-footer">{{ note.timestamp }}</p>
           </div>
         </li>
       }

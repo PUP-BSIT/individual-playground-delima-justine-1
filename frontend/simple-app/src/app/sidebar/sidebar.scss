@@ -4,6 +4,10 @@ h1 {
   margin: 0;
 }
 
+label {
+  font-weight: bold;
+}
+
 .sidebar-container {
   background-color: $sidebar-bg-color;
   width: 25%;
@@ -42,4 +46,8 @@ h1 {
   flex-direction: row;
   gap: 1em;
   height: 100%;
+}
+
+.notes-container {
+  margin-top: 40px;
 }
