@@ -13,20 +13,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RestController
 public class SimpleAppController {
 
-  @Autowired
+  @Autowired // Setups the dependency injection.
   private NoteRepo noteRepo;
 
-  @GetMapping("/")
+  @GetMapping("/") // Get Method
   public String sayHello() {
     return "<h1>Hello SpringBoot!</h1>";
   }
 
-  @GetMapping(value = "/notes")
+  @GetMapping(value = "/notes") // Get Method
   public List<Note> getNotes() {
     return noteRepo.findAll();
   }
 
-  @PostMapping(value = "/add_note")
+  @PostMapping(value = "/add_note") // Post Method
   public String addNote(@RequestBody Note note) {
     noteRepo.save(note);
     return "Note added!";
